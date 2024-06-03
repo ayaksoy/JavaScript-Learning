@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="assets/css/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="content">
+				<button onclick="start()" id="start">System Start</button>
+				<div id="system">
+					<h2>System</h2>
+					<div id="login">
+						<input type="email" placeholder="Enter Email" id="email" />
+						<br />
+						<input type="password" placeholder="Enter Password" id="password" />
+						<br />
+						<button onclick="login()">Login</button>
+						<br />
+						<label id="islogin"></label>
+					</div>
+					<div id="proccess">
+						<h2>Proccess Select</h2>
+						<label for="fColor">Font Color</label>
+						<br />
+						<input type="color" id="fColor" />
+						<br />
+						<label for="fFamily">Font Family</label>
+						<br />
+						<select id="fFamily">
+							<option value="sans-serif">sans-serif</option>
+							<option value="Helvetica">Helvetica</option>
+						</select>
+						<br />
+						<label for="fSize">Font Size</label>
+						<br />
+						<input
+							type="number"
+							min="10"
+							max="50"
+							value="10"
+							step="5"
+							id="fSize"
+						/>
+						<br />
+						<button onclick="applyProperty()">Apply Property</button>
+						<hr />
+						<div>
+							<label for="SayiSay" class="fontClass">Sayı Say</label>
+							<input
+								type="radio"
+								name="selection"
+								checked
+								value="SayiSay"
+								id="SayiSay"
+							/>
+							<br />
+							<label for="MevsimBul" class="fontClass">Mevsim Bul</label>
+							<input
+								type="radio"
+								name="selection"
+								value="MevsimBul"
+								id="MevsimBul"
+							/>
+							<br />
+							<label for="ZamanFarki" class="fontClass">Zaman Farkı</label>
+							<input
+								type="radio"
+								name="selection"
+								value="ZamanFarki"
+								id="ZamanFarki"
+							/>
+							<br />
+							<label for="RandomTelefon" class="fontClass"
+								>Random Telefon</label
+							>
+							<input
+								type="radio"
+								name="selection"
+								value="RandomTelefon"
+								id="RandomTelefon"
+							/>
+							<br />
+							<button onclick="selectPoccess()">Uygulamaya Başla</button>
+						</div>
+						<div id="SayiSayContent">
+							<label>Step</label>
+							<input
+								type="number"
+								placeholder="Enter Step"
+								min="1"
+								id="sayiStep"
+							/>
+							<br />
+							<label for="">Time</label>
+							<input
+								type="number"
+								placeholder="Enter Time"
+								min="1000"
+								step="1000"
+								id="sayiTime"
+							/>
+							<br />
+							<button onclick="sayiSayFunction()">Start</button>
+							<br />
+							<h1 id="sayiDegeri">0</h1>
+						</div>
+						<div id="MevsimBulContent">
+							<label>Ay Değeri Giriniz (1-12)</label>
+							<input
+								type="number"
+								min="1"
+								max="12"
+								step="1"
+								value="1"
+								id="aySecim"
+							/>
+							<br />
+							<button onclick="mevsimBulFunction()">Start</button>
+							<br />
+							<h1 id="secilenMevsim">Seçim Yok</h1>
+							<img id="secilenMevsimImg" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
