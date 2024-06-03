@@ -14,6 +14,6 @@ function baslat(){
 		document.getElementById("sure").innerText = sayi;
 		if (sayi == 10)
 			clearTimeout(sure)
-	},1000
+	},100
 	)
 }
