@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!--
+        Js Kullanımı
+
+        1. Tag içi kullanım
+        2. Site içi kullanım
+            2.1. Site içi head tagında kullanım (ön yükleme)
+            2.2. Site içi body tagının sonunda kullanım (yükleme sonrası)
+        3. Site dışı .js dosyası ile kullanım
+            3.1. Site dışı head tagında kullanım (ön yükleme)
+            3.1. Site dışı body tagının sonunda kullanım (yükleme sonrası)
+    -->
+
+		<!--Tag içi js kullanımı-->
+		<button type="button" onclick="alert('Merhaba Arkadaşlar')">Tıkla</button>
+		<!-- <button type="button" onclick='alert("Merhaba Arkadaşlar")'>Tıkla</button> -->
+
+		<button type="button" onclick="document.write('Merhaba Arkadaşlar')">
+			Yazı Yaz
+		</button>
+		<br />
+		<div id="yazi"></div>
+		<button type="button" onclick="'Merhaba Ben Bir Div Nesnesiyim'">
+			Div'e yazı ekle
+		</button>
+		<br />
+		<button
+			type="button"
+			onclick="document.getElementById('isim').textContent='Kaya'"
+		>
+			Yazı Ekle
+		</button>
+		<div id="deger1">Erhan</div>
+		<div id="deger2">Kaya</div>
+		<button
+			onclick="
+    document.getElementById('deger2').innerText=document.getElementById('deger1').innerText"
+		>
+			Değer Aktar
+		</button>
+		<!--
+        Eğer bir nesneden değer almak isterseniz değerin sadece özelliğini çekmek yeterli
+        document.getElemenById('isim').textContet; içindeki değere erişme
+        document.getElemenById('isim').textContet="Kaya"; içindeki değere atrama işlemi
+    -->
+
+		<br />
+		<button onclick="document.getElementById('resim').src='assets/resim1.png'">
+			1. Resmi Çağır
+		</button>
+		<button onclick="document.getElementById('resim').src='assets/resim2.png'">
+			2. Resmi Çağır
+		</button>
+		<br />
+		<img id="resim" />
+		<hr />
+		<button onclick="document.getElementById('ampul').src='assets/acik.gif'">
+			Open
+		</button>
+		<button onclick="document.getElementById('ampul').src='assets/kapali.gif'">
+			Close
+		</button>
+		<img src="assets/kapali.gif" id="ampul" />
+	</body>
+</html>
