@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script>
+			function printText() {
+				var yazi = document.getElementById("yazi");
+				yazi.innerText = "Merhaba Ben Bir Div Nesnesiyim";
+				console.log("Dive yazı eklendi");
+				alert("Dive yazı eklendi");
+			}
+			function addObject() {
+				var div = document.getElementById("div");
+				div.innerHTML += "<button>New Button</button>";
+			}
+			var number = 0;
+			function countNumber() {
+				number++;
+				document.getElementById("number").innerText = number;
+			}
+			function resetNumber() {
+				number = 0;
+				document.getElementById("number").innerText = number;
+			}
+		</script>
+	</head>
+	<body>
+		<button id="button" onclick="printText()">Click</button>
+		<br />
+		<div id="yazi"></div>
+		<button onclick="addObject()">Add</button>
+		<div id="div"></div>
+		<button onclick="countNumber()">count</button>
+		<div id="number"></div>
+		<button onclick="number = -1;countNumber()">sifirla</button>
+		<button onclick="resetNumber()">sifirla2</button>
+	</body>
+</html>
