@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.proccessPanel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.panel-item {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+.panel-item h2 {
+    margin-top: 0;
+    position: relative;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.panel-item h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: #4CAF50;
+    margin: 10px auto 0;
+    border-radius: 5px;
+    margin-left: 10px ;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+.panel-item h2:hover {
+    color: #4CAF50;
+}
+.panel-item h2:hover::after {
+    width: 100px;
+    background: #45a049;
+}
+
+.panel-item h2::after:hover {
+    background: #a2bfa3;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #4CAF50, 0 0 30px #4CAF50, 0 0 40px #4CAF50, 0 0 55px #4CAF50, 0 0 75px #4CAF50;
+}
+
+
+.panel-item hr {
+    margin: 10px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+form input[type="checkbox"] {
+    margin-bottom: 20px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #4CAF50, 0 0 30px #4CAF50, 0 0 40px #4CAF50, 0 0 55px #4CAF50, 0 0 75px #4CAF50;
+}
+
+
+
+.dataPanel {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	transition: 2s;
+}
+.dataPanel h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 5px;
+    background: #4CAF50;
+    margin: 10px auto 0;
+    border-radius: 5px;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+.dataPanel h2 {
+    margin-top: 0;
+}
+
+.dataPanel hr {
+    margin: 10px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table td {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.dataPanel h2:hover {
+    color: #4CAF50;
+}
+
+.dataPanel h2:hover::after {
+    width: 100px;
+    background: #45a049;
+}
