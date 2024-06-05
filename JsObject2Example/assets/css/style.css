@@ -1,0 +1,56 @@
+.container{
+    width: calc(100% - 200px);
+    padding: 20px 100px; 
+}
+.container .proccessPanel{
+    width: calc(35% - 50px);
+    float: left;
+    margin-right: 50px;
+}
+.container .proccessPanel .panel-item{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0px 20px 20px 20px;
+    margin-bottom: 20px;
+}
+.container .proccessPanel .panel-item .input{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.container .dataPanel{
+    width: calc(65% - 42px);
+    float: left;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 0px 20px 20px 20px;
+}
+.container .dataPanel table{
+    width: 100%;
+    border-spacing:0px;
+    border-collapse: none;
+}
+.container .dataPanel table tr td,
+.container .dataPanel table tr th
+{
+    text-align: center;
+    border: 1px solid gray;
+}
+.container .proccessPanel .panel-item .head{
+    width: 100%;
+    float: left;
+}
+.container .proccessPanel .panel-item .panel-Head{
+    float: left;
+    width: 80%;
+}
+
+.container .proccessPanel .panel-item .panel-IO{
+    float: right;
+    width: 20%;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+

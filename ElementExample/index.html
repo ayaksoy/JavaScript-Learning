@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Element Creator</title>
+		<style>
+			.container {
+				display: flex;
+			}
+			.options {
+				width: 200px;
+				border-right: 1px solid black;
+				padding-right: 10px;
+			}
+			.form-container {
+				padding-left: 10px;
+			}
+			.form-container > div {
+				display: none;
+			}
+			.form-container > div.active {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="options">
+				<h3>Select Tag Name</h3>
+				<select id="tagSelector" onchange="showForm()">
+					<option value="">Select Tag</option>
+					<option value="divForm">Div</option>
+					<option value="paraForm">Paragraf</option>
+					<option value="inputForm">Input</option>
+					<option value="headForm">Head</option>
+				</select>
+			</div>
+			<div class="form-container">
+				<div id="divForm" class="form">
+					<h3>Div</h3>
+					<label>Id Name: <input type="text" id="divId" /></label><br />
+					<label>Class Name: <input type="text" id="divClass" /></label><br />
+					<label>Width: <input type="text" id="divWidth" /></label>
+					<label>Height: <input type="text" id="divHeight" /></label><br />
+					<button onclick="createDiv()">Oluştur</button>
+				</div>
+				<div id="paraForm" class="form">
+					<h3>Paragraf</h3>
+					<label>Id Name: <input type="text" id="paraId" /></label><br />
+					<label>Class Name: <input type="text" id="paraClass" /></label><br />
+					<label>Text: <input type="text" id="paraText" /></label><br />
+					<button onclick="createPara()">Oluştur</button>
+				</div>
+				<div id="inputForm" class="form">
+					<h3>Input</h3>
+					<label>Id Name: <input type="text" id="inputId" /></label><br />
+					<label>Class Name: <input type="text" id="inputClass" /></label><br />
+					<label>Type: <input type="text" id="inputType" /></label><br />
+					<label>Value: <input type="text" id="inputValue" /></label><br />
+					<button onclick="createInput()">Oluştur</button>
+				</div>
+				<div id="headForm" class="form">
+					<h3>Head</h3>
+					<label>Id Name: <input type="text" id="headId" /></label><br />
+					<label>Class Name: <input type="text" id="headClass" /></label><br />
+					<label>Head Level: <input type="text" id="headLevel" /></label><br />
+					<label>Text: <input type="text" id="headText" /></label><br />
+					<button onclick="createHead()">Oluştur</button>
+				</div>
+			</div>
+		</div>
+		<div id="output"></div>
+
+		<script src="assets/js/script.js"></script>
+	</body>
+</html>
